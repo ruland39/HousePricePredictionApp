@@ -14,4 +14,23 @@
     <string name="land_title">Land Title</string>
     <string name="developer">Developer</string>
     <string name="proceed">Proceed</string>
+    <string name="facilities">Facilities</string>
+    <string name="nearby_facilities">Nearby Facilities</string>
+    <string name="gymnasium">🏋️ Gymnasium</string>
+    <string name="swimming_pool">🏊 Swimming Pool</string>
+    <string name="jogging_track">🏃‍♂️ Jogging Track</string>
+    <string name="playground">🛝 Playground</string>
+    <string name="security">👮 Security</string>
+    <string name="minimart">🛒 Minimart</string>
+    <string name="multipurpose_hall">🏟️ Multipurpose Hall</string>
+    <string name="sauna">🧖 Sauna</string>
+    <string name="clubhouse">🌊 Clubhouse</string>
+    <string name="barbeque_area">🥩 Barbeque Area</string>
+    <string name="railway_station">🚆 Railway Station</string>
+    <string name="bus_stop">🚍 Bus Stop</string>
+    <string name="highway">🚘 Highway</string>
+    <string name="mall">🛍️ Mall</string>
+    <string name="school">🏫 School</string>
+    <string name="hospital">🏥 Hospital</string>
+    <string name="park">🏞️ Park</string>
 </resources>
