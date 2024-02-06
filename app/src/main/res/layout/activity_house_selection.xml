@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HouseSelection"
+    android:paddingTop="16dp"
+    android:paddingHorizontal="16dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollContainer"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="House Features Selection"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fill in the house features you'd like to have"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/proceedButton"
+        android:layout_marginVertical="16dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/featuresContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+<!--            Location/Area-->
+                <LinearLayout
+                    android:id="@+id/locationAreaContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Location/Area"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        />
+
+                    <Spinner
+                        android:id="@+id/locationAreaSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+<!--            Property Type-->
+            <LinearLayout
+                android:id="@+id/propertyTypeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Property Type"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/propertyTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Property Size-->
+            <LinearLayout
+                android:id="@+id/propertySizeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Property Size"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/propertySizeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Number of Bedroom-->
+            <LinearLayout
+                android:id="@+id/numberOfBedroomContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Number of Bedroom"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/NumberOfBedroomSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Number of Bathroom-->
+            <LinearLayout
+                android:id="@+id/numberOfBathroomContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Number of Bathroom"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/NumberOfBathroomSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Parking Lot-->
+            <LinearLayout
+                android:id="@+id/parkingLotContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Parking Lot"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/parkingLotSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Floor Range-->
+            <LinearLayout
+                android:id="@+id/floorRangeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Floor Range"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/floorRangeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Facilities-->
+<!--            Nearby Facilities-->
+
+
+<!--            Age of Unit-->
+            <LinearLayout
+                android:id="@+id/ageOfUnitContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Age of Unit"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/ageOfUnitSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Tenure Type-->
+            <LinearLayout
+                android:id="@+id/tenureTypeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tenure Type"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/tenureTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Land Title-->
+            <LinearLayout
+                android:id="@+id/landTitleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Land Title"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/landTitleSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+<!--            Developer-->
+            <LinearLayout
+                android:id="@+id/developerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Developer"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/developerSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/proceedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        app:layout_constraintTop_toBottomOf="@id/scrollContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
