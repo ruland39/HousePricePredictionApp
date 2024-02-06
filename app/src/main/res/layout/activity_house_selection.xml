@@ -36,6 +36,7 @@
             android:textAlignment="textStart"
             android:fontFamily="@font/manrope_semibold"
             android:textSize="16sp"
+            android:textColor="@color/grey_medium"
             />
 
     </LinearLayout>
@@ -589,7 +590,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/developer"
+                    android:text="@string/developer_"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
