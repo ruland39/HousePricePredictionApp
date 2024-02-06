@@ -23,15 +23,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="House Features Selection"
+            android:text="@string/house_features_selection"
             android:textAlignment="textStart"
+            android:fontFamily="@font/manrope_bold"
             android:textSize="24sp"
             />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fill in the house features you'd like to have"
+            android:text="@string/fill_in_the_house_features_you_d_like_to_have"
             android:textAlignment="textStart"
+            android:fontFamily="@font/manrope_semibold"
             android:textSize="16sp"
             />
 
@@ -66,16 +69,25 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Location/Area"
+                        android:text="@string/location_area"
                         android:textAlignment="textStart"
                         android:textSize="16sp"
                         />
 
-                    <Spinner
-                        android:id="@+id/locationAreaSpinner"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/LocationAreaSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        />
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+
+                        <AutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
 
@@ -91,16 +103,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Property Type"
+                    android:text="@string/property_type"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/propertyTypeSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -116,16 +137,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Property Size"
+                    android:text="@string/property_size"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/propertySizeSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -141,16 +171,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Number of Bedroom"
+                    android:text="@string/number_of_bedroom"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
-                    android:id="@+id/NumberOfBedroomSpinner"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/numberOfBedroomSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -166,16 +205,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Number of Bathroom"
+                    android:text="@string/number_of_bathroom"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
-                    android:id="@+id/NumberOfBathroomSpinner"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/numberOfBathroomSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -191,16 +239,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Parking Lot"
+                    android:text="@string/parking_lot"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/parkingLotSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -216,21 +273,31 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Floor Range"
+                    android:text="@string/floor_range"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/floorRangeSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
-<!--            Facilities-->
-<!--            Nearby Facilities-->
+
+<!--            TODO: Facilities-->
+<!--            TODO: Nearby Facilities-->
 
 
 <!--            Age of Unit-->
@@ -245,16 +312,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Age of Unit"
+                    android:text="@string/age_of_unit"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/ageOfUnitSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -270,16 +346,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tenure Type"
+                    android:text="@string/tenure_type"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tenureTypeSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -295,16 +380,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Land Title"
+                    android:text="@string/land_title"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/landTitleSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -320,21 +414,27 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Developer"
+                    android:text="@string/developer"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
                     />
 
-                <Spinner
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/developerSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
-
-
-
 
         </LinearLayout>
 
@@ -344,12 +444,15 @@
         android:id="@+id/proceedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Proceed"
+        android:text="@string/proceed"
         app:layout_constraintTop_toBottomOf="@id/scrollContainer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/manrope_bold"
+        android:textSize="16sp"
+        android:paddingVertical="16dp"
         />
 
 

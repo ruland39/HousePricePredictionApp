@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">HousePricePredictionApp</string>
+    <string name="house_features_selection">House Features Selection</string>
+    <string name="fill_in_the_house_features_you_d_like_to_have">Fill in the house features you\'d like to have</string>
+    <string name="location_area">Location/Area</string>
+    <string name="property_type">Property Type</string>
+    <string name="property_size">Property Size</string>
+    <string name="number_of_bedroom">Number of Bedroom</string>
+    <string name="number_of_bathroom">Number of Bathroom</string>
+    <string name="parking_lot">Parking Lot</string>
+    <string name="floor_range">Floor Range</string>
+    <string name="age_of_unit">Age of Unit</string>
+    <string name="tenure_type">Tenure Type</string>
+    <string name="land_title">Land Title</string>
+    <string name="developer">Developer</string>
+    <string name="proceed">Proceed</string>
 </resources>
