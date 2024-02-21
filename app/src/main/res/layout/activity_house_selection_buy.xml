@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HouseSelectionBuyActivity"
+    android:paddingTop="16dp"
+    android:paddingHorizontal="16dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollContainer"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/house_features_selection"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/manrope_bold"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fill_in_the_house_features_you_d_like_to_have"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/manrope_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/grey_medium"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/proceedButton"
+        android:layout_marginVertical="16dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/featuresContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+<!--            Location/Area-->
+                <LinearLayout
+                    android:id="@+id/locationAreaContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location_area"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/LocationAreaSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+
+                        <AutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+<!--            Property Type-->
+            <LinearLayout
+                android:id="@+id/propertyTypeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/property_type"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/propertyTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            Property Size-->
+            <LinearLayout
+                android:id="@+id/propertySizeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/property_size"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/propertySizeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            Number of Bedroom-->
+            <LinearLayout
+                android:id="@+id/numberOfBedroomContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number_of_bedroom"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/numberOfBedroomSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            Number of Bathroom-->
+            <LinearLayout
+                android:id="@+id/numberOfBathroomContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number_of_bathroom"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/numberOfBathroomSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            Parking Lot-->
+            <LinearLayout
+                android:id="@+id/parkingLotContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/parking_lot"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/parkingLotSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            Floor Range-->
+            <LinearLayout
+                android:id="@+id/floorRangeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/floor_range"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/floorRangeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+<!--            TODO: Facilities-->
+            <LinearLayout
+                android:id="@+id/facilitiesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/facilities"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/facilitiesChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/gymnasiumChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gymnasium"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/swimmingPoolChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/swimming_pool"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/joggingTrackChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jogging_track"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/playgroundChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/playground"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/securityChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/security"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/minimartChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/minimart"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/multipurposeHallChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/multipurpose_hall"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/saunaChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sauna"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/clubhouseChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clubhouse"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/barbequeAreaChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/barbeque_area"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+
+
+            </LinearLayout>
+
+<!--            Nearby Facilities-->
+            <LinearLayout
+                android:id="@+id/nearbyFacilitiesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nearby_facilities"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/nearbyFacilitiesChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/railwayStationChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/railway_station"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/busStopChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bus_stop"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/highwayChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/highway"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/mallChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mall"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/schoolChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/school"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/hospitalChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hospital"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/parkChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/park"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+
+
+<!--            Age of Unit-->
+            <LinearLayout
+                android:id="@+id/ageOfUnitContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/age_of_unit"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ageOfUnitSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            Tenure Type-->
+            <LinearLayout
+                android:id="@+id/tenureTypeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tenure_type"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tenureTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            Land Title-->
+            <LinearLayout
+                android:id="@+id/landTitleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/land_title"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/landTitleSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            Developer-->
+            <LinearLayout
+                android:id="@+id/developerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/developer_"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/developerSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/proceedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/proceed"
+        app:layout_constraintTop_toBottomOf="@id/scrollContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/manrope_bold"
+        android:textSize="16sp"
+        android:paddingVertical="16dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

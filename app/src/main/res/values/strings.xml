@@ -55,4 +55,10 @@
     <string name="back">Back</string>
     <string name="share">Share</string>
 
+    <string name="noOfBedroom">Bedroom</string>
+    <string name="noOfBathroom">Bathroom</string>
+    <string name="noOfparking">Parking</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+
 </resources>

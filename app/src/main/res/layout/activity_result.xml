@@ -33,7 +33,6 @@
         app:layout_constraintTop_toBottomOf="@id/backButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf=""
         android:layout_marginTop="8dp"
         >
 
@@ -99,7 +98,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="fill_horizontal"
@@ -161,7 +160,15 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="fill_horizontal"
+            >
 
+
+        </LinearLayout>
 
 
 
@@ -175,7 +182,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/number_of_bedroom"
+                android:text="@string/noOfBedroom"
                 android:textAlignment="textStart"
                 android:textSize="16sp"
                 />
@@ -201,7 +208,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/number_of_bathroom"
+                android:text="@string/noOfBathroom"
                 android:textAlignment="textStart"
                 android:textSize="16sp"
                 />
@@ -227,7 +234,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/parking_lot"
+                android:text="@string/noOfparking"
                 android:textAlignment="textStart"
                 android:textSize="16sp"
                 />
