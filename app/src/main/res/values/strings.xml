@@ -61,4 +61,88 @@
     <string name="buy">Buy</string>
     <string name="sell">Sell</string>
 
+
+    <string-array name="location_area_array">
+        <item>Setapak</item>
+        <item>Wangsa Maju</item>
+        <item>Cheras</item>
+        <item>Kepong</item>
+        <item>Mont Kiara</item>
+    </string-array>
+
+    <string-array name="property_type_array">
+        <item>Apartment</item>
+        <item>Condominium</item>
+        <item>Serviced Residence</item>
+        <item>Flat</item>
+        <item>Studio</item>
+    </string-array>
+
+    <string-array name="property_size_array">
+        <item>500 sq.ft.</item>
+        <item>1000 sq.ft.</item>
+        <item>1500 sq.ft.</item>
+        <item>2000 sq.ft.</item>
+        <item>2500 sq.ft.</item>
+    </string-array>
+
+    <string-array name="number_of_bedroom_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="number_of_bathroom_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="parking_lot_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="floor_range_array">
+        <item>Low (1-10)</item>
+        <item>Medium (11-20)</item>
+        <item>High (21-30)</item>
+        <item>Very High (31-40)</item>
+        <item>Super High (41-50)</item>
+    </string-array>
+
+    <string-array name="age_of_unit_array">
+        <item>1 year</item>
+        <item>5 years</item>
+        <item>10 years</item>
+        <item>15 years</item>
+        <item>20 years</item>
+    </string-array>
+
+    <string-array name="tenure_type_array">
+        <item>Freehold</item>
+        <item>Leasehold</item>
+    </string-array>
+
+    <string-array name="land_title_array">
+        <item>Residential</item>
+        <item>Commercial</item>
+        <item>Industrial</item>
+    </string-array>
+
+    <string-array name="developer_array">
+        <item>Kenwingston Group</item>
+        <item>SP Setia</item>
+        <item>UOA Group</item>
+        <item>IOI Properties</item>
+        <item>Sunway Group</item>
+    </string-array>
+
 </resources>
