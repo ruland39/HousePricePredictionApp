@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import com.google.android.material.chip.Chip
 import com.google.android.material.textfield.TextInputLayout
 import com.housepricepredictionapp.databinding.ActivityHouseSelectionSellBinding
 
@@ -23,9 +24,8 @@ class HouseSelectionSellActivity : AppCompatActivity() {
         val parkingLot = binding.parkingLotEditText
         val floorRange= binding.floorRangeEditText
 
-        //TODO: add Facilities
-
-        //TODO: add Nearby Facilities
+        val facilitiesChipGroup = binding.facilitiesChipGroup
+        val nearbyFacilitiesChipGroup = binding.nearbyFacilitiesChipGroup
 
 
         val ageOfUnit = binding.ageOfUnitEditText
@@ -82,6 +82,16 @@ class HouseSelectionSellActivity : AppCompatActivity() {
             val selectedLandTitle = landTitle.editText?.text.toString()
             val selectedDeveloper = developer.editText?.text.toString()
 
+            // Get the selected chips from facilitiesChipGroup
+            val selectedFacilitiesChips = facilitiesChipGroup
+                .checkedChipIds
+                .map { findViewById<Chip>(it).text.toString() }
+
+            // Get the selected chips from nearbyFacilitiesChipGroup
+            val selectedNearbyFacilitiesChips = nearbyFacilitiesChipGroup
+                .checkedChipIds
+                .map { findViewById<Chip>(it).text.toString() }
+
             // Create an Intent
             val intent = Intent(this, Result::class.java)
 
@@ -98,6 +108,10 @@ class HouseSelectionSellActivity : AppCompatActivity() {
             intent.putExtra("TENURE_TYPE", selectedTenureType)
             intent.putExtra("LAND_TITLE", selectedLandTitle)
             intent.putExtra("DEVELOPER", selectedDeveloper)
+
+            // Put the selected chips as extras in the Intent
+            intent.putStringArrayListExtra("SELECTED_FACILITIES_CHIPS", ArrayList(selectedFacilitiesChips))
+            intent.putStringArrayListExtra("SELECTED_NEARBY_FACILITIES_CHIPS", ArrayList(selectedNearbyFacilitiesChips))
 
             intent.setClass(this, Result::class.java)
             startActivity(intent)

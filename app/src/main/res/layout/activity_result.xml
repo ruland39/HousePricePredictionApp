@@ -25,6 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <LinearLayout
         android:id="@+id/linear1"
         android:layout_width="match_parent"
@@ -75,7 +76,7 @@
                 android:textColor="@color/white"
                 android:background="@color/red_primary"
                 android:paddingVertical="8dp"
-                android:paddingEnd="8dp"
+                android:paddingEnd="4dp"
                 android:paddingStart="16dp"
                 android:layout_gravity="center"
                 />
@@ -95,7 +96,7 @@
                 android:background="@color/red_primary"
                 android:paddingVertical="8dp"
                 android:paddingEnd="16dp"
-                android:paddingStart="8dp"
+                android:paddingStart="4dp"
                 android:layout_gravity="center"
                 />
 
@@ -353,15 +354,20 @@
                 android:textSize="16sp"
                 />
 
-            <TextView
-                android:id="@+id/facilitiesTextView"
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/facilitiesChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/numberOfBedroom"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
+                android:layout_marginTop="8dp">
+
+                <!-- Add a placeholder chip for demonstration -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+            </com.google.android.material.chip.ChipGroup>
 
         </LinearLayout>
 
@@ -381,15 +387,19 @@
                 android:textSize="16sp"
                 />
 
-            <TextView
-                android:id="@+id/nearbyFacilitiesTextView"
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/nearbyFacilitiesChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/numberOfBedroom"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
+                android:layout_marginTop="8dp">
+
+                <!-- Add a placeholder chip for demonstration -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    style="@style/Widget.MaterialComponents.Chip.Choice" />
+            </com.google.android.material.chip.ChipGroup>
 
         </LinearLayout>
 

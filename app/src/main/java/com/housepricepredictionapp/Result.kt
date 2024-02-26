@@ -3,6 +3,7 @@ package com.housepricepredictionapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.android.material.chip.Chip
 import com.housepricepredictionapp.databinding.ActivityResultBinding
 
 class Result : AppCompatActivity() {
@@ -16,7 +17,8 @@ class Result : AppCompatActivity() {
 
         // Get the selected values from the intent extras
 //        val priceValue = intent.getStringExtra("PRICE")
-        val priceValue = "340 000"
+        //make priceValue a random generated number from 100,000 to 1,000,000
+        val priceValue = (100000..1000000).random().toString()
         val locationAreaValue = intent.getStringExtra("LOCATION_AREA")
         val propertyTypeValue = intent.getStringExtra("PROPERTY_TYPE")
         val propertySizeValue = intent.getStringExtra("PROPERTY_SIZE")
@@ -28,6 +30,8 @@ class Result : AppCompatActivity() {
         val tenureTypeValue = intent.getStringExtra("TENURE_TYPE")
         val landTitleValue = intent.getStringExtra("LAND_TITLE")
         val developerValue = intent.getStringExtra("DEVELOPER")
+        val selectedFacilitiesChips = intent.getStringArrayListExtra("SELECTED_FACILITIES_CHIPS")
+        val selectedNearbyFacilitiesChips = intent.getStringArrayListExtra("SELECTED_NEARBY_FACILITIES_CHIPS")
 
         //variable declaration
         val backButton = binding.backButton
@@ -41,6 +45,10 @@ class Result : AppCompatActivity() {
         val numberOfBathroom = binding.numberOfBathroomTextView
         val parkingLot = binding.parkingLotTextView
         val floorRange = binding.floorRangeTextView
+
+        val facilities = binding.facilitiesChipGroup
+        val nearbyFacilities = binding.nearbyFacilitiesChipGroup
+
         val ageOfUnit = binding.ageOfUnitTextView
         val tenureType = binding.tenureTypeTextView
         val landTitle = binding.landTitleTextView
@@ -59,6 +67,27 @@ class Result : AppCompatActivity() {
         tenureType.text = tenureTypeValue
         landTitle.text = landTitleValue
         developer.text = developerValue
+
+        // Clear existing chips
+        facilities.removeAllViews()
+        nearbyFacilities.removeAllViews()
+
+        // Create and add chips for selected facilities
+        selectedFacilitiesChips?.forEach { facility ->
+            val chip = Chip(this)
+            chip.text = facility
+            chip.isSelected = true
+            facilities.addView(chip)
+        }
+
+        // Create and add chips for selected nearby facilities
+        selectedNearbyFacilitiesChips?.forEach { nearbyFacility ->
+            val chip = Chip(this)
+            chip.text = nearbyFacility
+            chip.isSelected = true
+            nearbyFacilities.addView(chip)
+        }
+
 
         //back button
         backButton.setOnClickListener {
