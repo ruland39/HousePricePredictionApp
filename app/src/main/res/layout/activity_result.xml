@@ -55,27 +55,65 @@
             android:textColor="@color/grey_medium"
             />
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/price"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:fontFamily="@font/manrope_bold"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/white"
-            android:background="@color/red_primary"
-            android:paddingVertical="8dp"
-            android:paddingHorizontal="16dp"
+            android:orientation="horizontal"
             android:layout_gravity="center"
-            />
+            >
+
+            <TextView
+                android:id="@+id/ringgit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ringgit"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:fontFamily="@font/manrope_bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:textColor="@color/white"
+                android:background="@color/red_primary"
+                android:paddingVertical="8dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="16dp"
+                android:layout_gravity="center"
+                />
+
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:fontFamily="@font/manrope_bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:textColor="@color/white"
+                android:background="@color/red_primary"
+                android:paddingVertical="8dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="8dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
         <LinearLayout
             android:id="@+id/locationAreaContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="8dp"
             >
 
             <TextView
@@ -87,6 +125,7 @@
                 />
 
             <TextView
+                android:id="@+id/locationAreaTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/locationArea"
@@ -102,6 +141,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="8dp"
             >
 
             <LinearLayout
@@ -121,6 +161,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/propertyTypeTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/propertyType"
@@ -148,6 +189,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/propertySizeTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/propertySize"
@@ -165,122 +207,142 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="fill_horizontal"
-            >
+            android:baselineAligned="false"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:id="@+id/numberOfBedroomContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noOfBedroom"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/numberOfBedroomTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numberOfBedroom"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/manrope_medium"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/numberOfBathroomContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noOfBathroom"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/numberOfBathroomTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numberOfBathroom"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/manrope_medium"
+                    />
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
 
-
-        <LinearLayout
-            android:id="@+id/numberOfBedroomContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/noOfBedroom"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
+                android:orientation="horizontal"
+                android:layout_gravity="fill_horizontal"
+                android:baselineAligned="false"
+                android:layout_marginTop="8dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/numberOfBedroom"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
+                <LinearLayout
+                    android:id="@+id/parkingLotContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
 
-        </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/noOfparking"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        />
 
-        <LinearLayout
-            android:id="@+id/numberOfBathroomContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+                    <TextView
+                        android:id="@+id/parkingLotTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/parkingLot"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/manrope_medium"
+                        />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/noOfBathroom"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
+                </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/numberOfBathroom"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
+                <LinearLayout
+                    android:id="@+id/floorRangeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
 
-        </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/floor_range"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        />
 
-        <LinearLayout
-            android:id="@+id/parkingLotContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+                    <TextView
+                        android:id="@+id/floorRangeTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/floorRange"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/manrope_medium"
+                        />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/noOfparking"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
+                </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/parkingLot"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
+            </LinearLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/floorRangeContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/floor_range"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/floorRange"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
-
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/facilitiesContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="8dp"
             >
 
             <TextView
@@ -292,6 +354,7 @@
                 />
 
             <TextView
+                android:id="@+id/facilitiesTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/numberOfBedroom"
@@ -307,6 +370,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="8dp"
             >
 
             <TextView
@@ -318,6 +382,7 @@
                 />
 
             <TextView
+                android:id="@+id/nearbyFacilitiesTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/numberOfBedroom"
@@ -328,118 +393,154 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ageOfUnitContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/age_of_unit"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
+                android:orientation="horizontal"
+                android:layout_gravity="fill_horizontal"
+                android:baselineAligned="false"
+                android:layout_marginTop="8dp">
 
-            <TextView
+                <LinearLayout
+                    android:id="@+id/ageOfUnitContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/age_of_unit"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/ageOfUnitTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ageOfUnit"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/manrope_medium"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tenureTypeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tenure_type"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tenureTypeTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tenureType"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/manrope_medium"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ageOfUnit"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
+                android:orientation="horizontal"
+                android:layout_gravity="fill_horizontal"
+                android:baselineAligned="false"
+                android:layout_marginTop="8dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/landTitleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/land_title"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/landTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/landTitle"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/manrope_medium"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/developerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/developer_"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/developerTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/developer"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/manrope_medium"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tenureTypeContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tenure_type"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tenureType"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/landTitleContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/land_title"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/landTitle"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/developerContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/developer_"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/developer"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/footer"
-            android:textAlignment="center"
-            android:textSize="12sp"/>
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/footer"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

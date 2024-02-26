@@ -36,8 +36,9 @@
     <string name="we_are_currently_evaluating_the_predicted_evaluation_price_with_your_feature_selection">We are currently evaluating the predicted evaluation price with your feature selection</string>
     <string name="predicted_evaluation_price">Predicted Evaluation Price</string>
     <string name="the_predicted_price_for_your_unit_with_the_feature_selection_is">The predicted price for your unit with the feature selection is</string>
+    <string name="ringgit">RM</string>
 
-    <string name="price">RM 340 000</string>
+    <string name="price">340 000</string>
     <string name="locationArea">Setapak, Kuala Lumpur</string>
     <string name="propertyType">Service Residence</string>
     <string name="propertySize">1000 sq.ft.</string>
