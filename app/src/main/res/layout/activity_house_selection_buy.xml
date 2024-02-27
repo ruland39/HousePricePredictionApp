@@ -297,7 +297,7 @@
             </LinearLayout>
 
 
-<!--            TODO: Facilities-->
+<!--            Facilities-->
             <LinearLayout
                 android:id="@+id/facilitiesContainer"
                 android:layout_width="match_parent"
