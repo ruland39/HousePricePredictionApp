@@ -3,6 +3,7 @@ package com.housepricepredictionapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.housepricepredictionapp.databinding.ActivityResultBinding
@@ -82,7 +83,7 @@ class Result : AppCompatActivity() {
             chip.isEnabled = true
             chip.isCheckable = true
             chip.isChecked = true
-            chip.chipBackgroundColor = resources.getColorStateList(R.color.red_transparent)
+            chip.chipBackgroundColor = ContextCompat.getColorStateList(this, R.color.red_transparent)
 
             facilities.addView(chip)
         }
@@ -96,8 +97,7 @@ class Result : AppCompatActivity() {
             chip.isEnabled = true
             chip.isCheckable = true
             chip.isChecked = true
-            chip.chipBackgroundColor = resources.getColorStateList(R.color.red_transparent)
-
+            chip.chipBackgroundColor = ContextCompat.getColorStateList(this, R.color.red_transparent)
             nearbyFacilities.addView(chip)
         }
 
