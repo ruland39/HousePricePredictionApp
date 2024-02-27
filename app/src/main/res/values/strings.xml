@@ -64,6 +64,7 @@
     <string name="buy">Buy</string>
     <string name="sell">Sell</string>
     <string name="floor_level">Floor Level</string>
+    <string name="in_years">in Years</string>
 
 
     <string-array name="location_area_array">
