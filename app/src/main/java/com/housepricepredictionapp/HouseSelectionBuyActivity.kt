@@ -3,6 +3,9 @@ package com.housepricepredictionapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import com.google.android.material.chip.Chip
@@ -88,11 +91,18 @@ class HouseSelectionBuyActivity : AppCompatActivity() {
 
         val proceedButton = binding.proceedButton
 
+        val progressbar = binding.progressBarContainer
+        progressbar.visibility = View.INVISIBLE
+
+
         //TODO: proceed button enable only when all fields are filled
         proceedButton.isEnabled = true
 
         //proceed to result
         proceedButton.setOnClickListener {
+
+            progressbar.visibility = View.VISIBLE
+
             // Get the selected values from the spinners
             val selectedLocationArea = locationArea.editText?.text.toString()
             val selectedPropertyType = propertyType.editText?.text.toString()
@@ -115,6 +125,12 @@ class HouseSelectionBuyActivity : AppCompatActivity() {
             val selectedNearbyFacilitiesChips = nearbyFacilitiesChipGroup
                 .checkedChipIds
                 .map { findViewById<Chip>(it).text.toString() }
+
+            //ProgressBar Delay
+            Handler(Looper.getMainLooper()).postDelayed({
+                progressbar.visibility = View.INVISIBLE
+            }, 3000)
+
 
             // Create an Intent
             val intent = Intent(this, Result::class.java)
