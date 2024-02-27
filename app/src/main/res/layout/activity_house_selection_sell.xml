@@ -253,12 +253,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
+                    android:hint="@string/floor_level"
                     />
 
             </LinearLayout>
 
 
-            <!--            TODO: Facilities-->
+            <!--            Facilities-->
             <LinearLayout
                 android:id="@+id/facilitiesContainer"
                 android:layout_width="match_parent"
