@@ -350,8 +350,7 @@
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/facilitiesChipGroup"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp">
+                        android:layout_height="wrap_content">
 
                         <!-- Add a placeholder chip for demonstration -->
                         <com.google.android.material.chip.Chip
@@ -381,8 +380,7 @@
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/nearbyFacilitiesChipGroup"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp">
+                        android:layout_height="wrap_content">
 
                         <!-- Add a placeholder chip for demonstration -->
                         <com.google.android.material.chip.Chip
