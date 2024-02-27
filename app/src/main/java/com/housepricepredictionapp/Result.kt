@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 import com.housepricepredictionapp.databinding.ActivityResultBinding
 
 class Result : AppCompatActivity() {
@@ -76,7 +77,13 @@ class Result : AppCompatActivity() {
         selectedFacilitiesChips?.forEach { facility ->
             val chip = Chip(this)
             chip.text = facility
+
             chip.isSelected = true
+            chip.isEnabled = true
+            chip.isCheckable = true
+            chip.isChecked = true
+            chip.chipBackgroundColor = resources.getColorStateList(R.color.red_transparent)
+
             facilities.addView(chip)
         }
 
@@ -84,7 +91,13 @@ class Result : AppCompatActivity() {
         selectedNearbyFacilitiesChips?.forEach { nearbyFacility ->
             val chip = Chip(this)
             chip.text = nearbyFacility
+
             chip.isSelected = true
+            chip.isEnabled = true
+            chip.isCheckable = true
+            chip.isChecked = true
+            chip.chipBackgroundColor = resources.getColorStateList(R.color.red_transparent)
+
             nearbyFacilities.addView(chip)
         }
 

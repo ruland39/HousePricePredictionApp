@@ -1,556 +1,534 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Result"
-    android:paddingTop="16dp"
     android:paddingHorizontal="16dp"
-    >
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/shareButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/share"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    android:paddingBottom="16dp"
+    android:scrollbars="none"
+    tools:context=".Result">
 
     <LinearLayout
-        android:id="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/backButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        >
+        android:orientation="vertical">
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/predicted_evaluation_price"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/manrope_bold"
-            android:textSize="24sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/the_predicted_price_for_your_unit_with_the_feature_selection_is"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/manrope_semibold"
-            android:textSize="16sp"
-            android:textColor="@color/grey_medium"
-            />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
-
-            <TextView
-                android:id="@+id/ringgit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ringgit"
-                android:textAlignment="center"
-                android:textSize="32sp"
-                android:fontFamily="@font/manrope_bold"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
-                android:textColor="@color/white"
-                android:background="@color/red_primary"
-                android:paddingVertical="8dp"
-                android:paddingEnd="4dp"
-                android:paddingStart="16dp"
-                android:layout_gravity="center"
-                />
-
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/price"
-                android:textAlignment="center"
-                android:textSize="32sp"
-                android:fontFamily="@font/manrope_bold"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
-                android:textColor="@color/white"
-                android:background="@color/red_primary"
-                android:paddingVertical="8dp"
-                android:paddingEnd="16dp"
-                android:paddingStart="4dp"
-                android:layout_gravity="center"
-                />
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-        <LinearLayout
-            android:id="@+id/locationAreaContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/location_area"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
-
-            <TextView
-                android:id="@+id/locationAreaTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/locationArea"
-                android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:fontFamily="@font/manrope_medium"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="fill_horizontal"
-            android:layout_marginTop="8dp"
-            >
-
-            <LinearLayout
-                android:id="@+id/propertyTypeContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/property_type"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    />
-
-                <TextView
-                    android:id="@+id/propertyTypeTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/propertyType"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/manrope_medium"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/propertySizeContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/property_size"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    />
-
-                <TextView
-                    android:id="@+id/propertySizeTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/propertySize"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/manrope_medium"
-                    />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="fill_horizontal"
-            android:baselineAligned="false"
             android:layout_marginTop="8dp">
 
-            <LinearLayout
-                android:id="@+id/numberOfBedroomContainer"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                >
+                android:src="@drawable/arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/back"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:paddingStart="0dp"
+                app:tint="@color/grey_dark"
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/noOfBedroom"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    />
+                />
 
-                <TextView
-                    android:id="@+id/numberOfBedroomTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/numberOfBedroom"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/manrope_medium"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/numberOfBathroomContainer"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/shareButton"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                >
+                android:src="@drawable/share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/share"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:paddingEnd="0dp"
+                app:tint="@color/grey_dark"
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/noOfBathroom"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    />
+                />
 
-                <TextView
-                    android:id="@+id/numberOfBathroomTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/numberOfBathroom"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/manrope_medium"
-                    />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="fill_horizontal"
-                android:baselineAligned="false"
-                android:layout_marginTop="8dp">
-
-                <LinearLayout
-                    android:id="@+id/parkingLotContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/noOfparking"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        />
-
-                    <TextView
-                        android:id="@+id/parkingLotTextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/parkingLot"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/manrope_medium"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/floorRangeContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/floor_range"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        />
-
-                    <TextView
-                        android:id="@+id/floorRangeTextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/floorRange"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/manrope_medium"
-                        />
-
-                </LinearLayout>
-
-            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <LinearLayout
-            android:id="@+id/facilitiesContainer"
+            android:id="@+id/linear1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="8dp"
-            >
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backButton">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/facilities"
+                android:fontFamily="@font/manrope_bold"
+                android:text="@string/predicted_evaluation_price"
                 android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/facilitiesChipGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
-
-                <!-- Add a placeholder chip for demonstration -->
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    style="@style/Widget.MaterialComponents.Chip.Choice" />
-
-            </com.google.android.material.chip.ChipGroup>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/nearbyFacilitiesContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp"
-            >
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nearby_facilities"
+                android:fontFamily="@font/manrope_semibold"
+                android:text="@string/the_predicted_price_for_your_unit_with_the_feature_selection_is"
                 android:textAlignment="textStart"
-                android:textSize="16sp"
-                />
+                android:textColor="@color/grey_medium"
+                android:textSize="16sp" />
 
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/nearbyFacilitiesChipGroup"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_gravity="center"
+                android:orientation="horizontal">
 
-                <!-- Add a placeholder chip for demonstration -->
-                <com.google.android.material.chip.Chip
+                <TextView
+                    android:id="@+id/ringgit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    style="@style/Widget.MaterialComponents.Chip.Choice" />
-            </com.google.android.material.chip.ChipGroup>
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@color/red_primary"
+                    android:fontFamily="@font/manrope_bold"
+                    android:paddingVertical="8dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/ringgit"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
 
-        </LinearLayout>
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@color/red_primary"
+                    android:fontFamily="@font/manrope_bold"
+                    android:paddingVertical="8dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/price"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="fill_horizontal"
-                android:baselineAligned="false"
-                android:layout_marginTop="8dp">
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/ageOfUnitContainer"
+                    android:id="@+id/locationAreaContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/age_of_unit"
+                        android:text="@string/location_area"
                         android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        />
+                        android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/ageOfUnitTextView"
+                        android:id="@+id/locationAreaTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ageOfUnit"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
                         android:fontFamily="@font/manrope_medium"
-                        />
+                        android:text="@string/locationArea"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/tenureTypeContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/propertyTypeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/property_type"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/propertyTypeTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/propertyType"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/propertySizeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/property_size"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/propertySizeTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/propertySize"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/numberOfBedroomContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/noOfBedroom"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/numberOfBedroomTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/numberOfBedroom"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/numberOfBathroomContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/noOfBathroom"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/numberOfBathroomTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/numberOfBathroom"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/parkingLotContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/noOfparking"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/parkingLotTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/parkingLot"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/floorRangeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/floor_range"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/floorRangeTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/floorRange"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/facilitiesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/tenure_type"
+                        android:text="@string/facilities"
                         android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        />
+                        android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/tenureTypeTextView"
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/facilitiesChipGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/tenureType"
+                        android:layout_marginTop="8dp">
+
+                        <!-- Add a placeholder chip for demonstration -->
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nearbyFacilitiesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearby_facilities"
                         android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/manrope_medium"
-                        />
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/nearbyFacilitiesChipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <!-- Add a placeholder chip for demonstration -->
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ageOfUnitContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/age_of_unit"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/ageOfUnitTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/ageOfUnit"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tenureTypeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tenure_type"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tenureTypeTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/tenureType"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/landTitleContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/land_title"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/landTitleTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/landTitle"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/developerContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/developer_"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/developerTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/developer"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="fill_horizontal"
-                android:baselineAligned="false"
-                android:layout_marginTop="8dp"
-                >
-
-                <LinearLayout
-                    android:id="@+id/landTitleContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/land_title"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        />
-
-                    <TextView
-                        android:id="@+id/landTitleTextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/landTitle"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/manrope_medium"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/developerContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/developer_"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        />
-
-                    <TextView
-                        android:id="@+id/developerTextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/developer"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/manrope_medium"
-                        />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/footer"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/footer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/footer"
-        android:textAlignment="center"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp"
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
