@@ -2,6 +2,7 @@
     <string name="app_name">HousePricePredictionApp</string>
     <string name="house_features_selection">House Features Selection</string>
     <string name="fill_in_the_house_features_you_d_like_to_have">Fill in the house features you\'d like to have</string>
+    <string name="buy_or_sell">Choose whether you want to buy or sell a property</string>
     <string name="location_area">Location/Area</string>
     <string name="property_type">Property Type</string>
     <string name="property_size">Property Size</string>
@@ -37,6 +38,7 @@
     <string name="predicted_evaluation_price">Predicted Evaluation Price</string>
     <string name="the_predicted_price_for_your_unit_with_the_feature_selection_is">The predicted price for your unit with the feature selection is</string>
     <string name="ringgit">RM</string>
+    <string name="or">OR</string>
 
     <string name="price">340 000</string>
     <string name="locationArea">Setapak, Kuala Lumpur</string>
@@ -61,6 +63,7 @@
     <string name="noOfparking">Parking</string>
     <string name="buy">Buy</string>
     <string name="sell">Sell</string>
+    <string name="floor_level">Floor Level</string>
 
 
     <string-array name="location_area_array">
