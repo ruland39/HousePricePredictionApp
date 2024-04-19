@@ -3,7 +3,7 @@
     <string name="house_features_selection">House Features Selection</string>
     <string name="fill_in_the_house_features_you_d_like_to_have">Fill in the house features you\'d like to have</string>
     <string name="buy_or_sell">Choose whether you want to buy or sell a property</string>
-    <string name="location_area">Location/Area</string>
+    <string name="location_area">State</string>
     <string name="property_type">Property Type</string>
     <string name="property_size">Property Size</string>
     <string name="number_of_bedroom">Number of Bedroom</string>
@@ -25,7 +25,7 @@
     <string name="minimart">🛒 Minimart</string>
     <string name="multipurpose_hall">🏟️ Multipurpose Hall</string>
     <string name="sauna">🧖 Sauna</string>
-    <string name="clubhouse">🌊 Clubhouse</string>
+    <string name="clubhouse">🌊 Club house</string>
     <string name="barbeque_area">🥩 Barbeque Area</string>
     <string name="railway_station">🚆 Railway Station</string>
     <string name="bus_stop">🚍 Bus Stop</string>
@@ -68,27 +68,43 @@
 
 
     <string-array name="location_area_array">
-        <item>Setapak</item>
-        <item>Wangsa Maju</item>
-        <item>Cheras</item>
-        <item>Kepong</item>
-        <item>Mont Kiara</item>
+        <item>Johor</item>
+        <item>Kedah</item>
+        <item>Kelantan</item>
+        <item>Kuala Lumpur</item>
+        <item>Labuan</item>
+        <item>Melaka</item>
+        <item>Negeri Sembilan</item>
+        <item>Pahang</item>
+        <item>Penang</item>
+        <item>Perak</item>
+        <item>Putrajaya</item>
+        <item>Sabah</item>
+        <item>Sarawak</item>
+        <item>Selangor</item>
+        <item>Terengganu</item>
+
     </string-array>
 
     <string-array name="property_type_array">
         <item>Apartment</item>
         <item>Condominium</item>
-        <item>Serviced Residence</item>
+        <item>Duplex</item>
         <item>Flat</item>
+        <item>Service Residence</item>
         <item>Studio</item>
+        <item>Townhouse Condo</item>
+
     </string-array>
 
     <string-array name="property_size_array">
-        <item>500 sq.ft.</item>
-        <item>1000 sq.ft.</item>
-        <item>1500 sq.ft.</item>
-        <item>2000 sq.ft.</item>
-        <item>2500 sq.ft.</item>
+        <item>300 – 500 sq.ft.</item>
+        <item>500 – 700 sq.ft.</item>
+        <item>700 – 900 sq.ft.</item>
+        <item>900 – 1100 sq.ft.</item>
+        <item>1100 – 1300 sq.ft.</item>
+        <item>1300 – 1500 sq.ft.</item>
+        <item>1500 – 1700 sq.ft.</item>
     </string-array>
 
     <string-array name="number_of_bedroom_array">
@@ -116,19 +132,16 @@
     </string-array>
 
     <string-array name="floor_range_array">
-        <item>Low (1-10)</item>
-        <item>Medium (11-20)</item>
-        <item>High (21-30)</item>
-        <item>Very High (31-40)</item>
-        <item>Super High (41-50)</item>
+        <item>High (21–30)</item>
+        <item>Low (1–10)</item>
+        <item>Medium (11–20)</item>
+
     </string-array>
 
     <string-array name="age_of_unit_array">
-        <item>1 year</item>
-        <item>5 years</item>
-        <item>10 years</item>
-        <item>15 years</item>
-        <item>20 years</item>
+        <item>7 – 9 years</item>
+        <item>10 – 13 years</item>
+        <item>14 – 16 years</item>
     </string-array>
 
     <string-array name="tenure_type_array">
@@ -137,17 +150,10 @@
     </string-array>
 
     <string-array name="land_title_array">
-        <item>Residential</item>
-        <item>Commercial</item>
-        <item>Industrial</item>
+        <item>Bumi Lot</item>
+        <item>Non Bumi Lot</item>
+
     </string-array>
 
-    <string-array name="developer_array">
-        <item>Kenwingston Group</item>
-        <item>SP Setia</item>
-        <item>UOA Group</item>
-        <item>IOI Properties</item>
-        <item>Sunway Group</item>
-    </string-array>
 
 </resources>
