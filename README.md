@@ -4,7 +4,9 @@ HousePricePredictionApp is a mobile application that predicts the estimated pric
   
 Dataset: https://www.kaggle.com/datasets/mcpenguin/raw-malaysian-housing-prices-data  
 Notebook: https://github.com/ruland39/HousePricePredictionML/blob/main/HousePricePredictionApp.ipynb  
-
+  
+https://github.com/ruland39/HousePricePredictionApp/assets/64399691/09b10494-6dde-4522-9101-48611868df52  
+  
 ## User Manual/Guide
 1. Download the APK from the release  
    ![image](https://github.com/ruland39/HousePricePredictionApp/assets/64399691/9da2c0ba-a65b-4fd5-adbe-b7edd8031fa2)
