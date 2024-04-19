@@ -231,212 +231,6 @@
 
             </LinearLayout>
 
-            <!--            Floor Range-->
-            <LinearLayout
-                android:id="@+id/floorRangeContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="8dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/floor_range"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    />
-
-                <EditText
-                    android:id="@+id/floorRangeEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/floor_level"
-                    />
-
-            </LinearLayout>
-
-
-            <!--            Facilities-->
-            <LinearLayout
-                android:id="@+id/facilitiesContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="8dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/facilities"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    />
-
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/facilitiesChipGroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/gymnasiumChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/gymnasium"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/swimmingPoolChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/swimming_pool"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/joggingTrackChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/jogging_track"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/playgroundChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/playground"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/securityChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/security"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/minimartChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/minimart"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/multipurposeHallChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/multipurpose_hall"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/saunaChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sauna"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/clubhouseChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/clubhouse"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/barbequeAreaChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/barbeque_area"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-
-                </com.google.android.material.chip.ChipGroup>
-
-
-
-
-            </LinearLayout>
-
-            <!--            Nearby Facilities-->
-            <LinearLayout
-                android:id="@+id/nearbyFacilitiesContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="8dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nearby_facilities"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    />
-
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/nearbyFacilitiesChipGroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/railwayStationChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/railway_station"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/busStopChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/bus_stop"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/highwayChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/highway"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/mallChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/mall"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/schoolChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/school"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/hospitalChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hospital"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/parkChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/park"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        />
-
-                </com.google.android.material.chip.ChipGroup>
-
-            </LinearLayout>
-
 
             <!--            Age of Unit-->
             <LinearLayout
@@ -540,6 +334,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="8dp"
+                android:visibility="gone"
                 >
 
                 <TextView
@@ -564,6 +359,163 @@
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--            Facilities-->
+            <LinearLayout
+                android:id="@+id/facilitiesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/facilities"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/facilitiesChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/gymnasiumChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gymnasium"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/swimmingPoolChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/swimming_pool"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/joggingTrackChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jogging_track"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/playgroundChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/playground"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/minimartChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/minimart"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/multipurposeHallChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/multipurpose_hall"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/clubhouseChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clubhouse"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+
+
+            </LinearLayout>
+
+            <!--            Nearby Facilities-->
+            <LinearLayout
+                android:id="@+id/nearbyFacilitiesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nearby_facilities"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/nearbyFacilitiesChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/railwayStationChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/railway_station"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/busStopChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bus_stop"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/highwayChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/highway"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/mallChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mall"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/schoolChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/school"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/hospitalChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hospital"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/parkChip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/park"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        />
+
+                </com.google.android.material.chip.ChipGroup>
 
             </LinearLayout>
 

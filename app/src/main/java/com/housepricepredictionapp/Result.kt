@@ -20,7 +20,7 @@ class Result : AppCompatActivity() {
         // Get the selected values from the intent extras
 //        val priceValue = intent.getStringExtra("PRICE")
         //make priceValue a random generated number from 100,000 to 1,000,000
-        val priceValue = (100000..1000000).random().toString()
+//        val priceValue = (100000..1000000).random().toString()
         val locationAreaValue = intent.getStringExtra("LOCATION_AREA")
         val propertyTypeValue = intent.getStringExtra("PROPERTY_TYPE")
         val propertySizeValue = intent.getStringExtra("PROPERTY_SIZE")
@@ -34,6 +34,7 @@ class Result : AppCompatActivity() {
         val developerValue = intent.getStringExtra("DEVELOPER")
         val selectedFacilitiesChips = intent.getStringArrayListExtra("SELECTED_FACILITIES_CHIPS")
         val selectedNearbyFacilitiesChips = intent.getStringArrayListExtra("SELECTED_NEARBY_FACILITIES_CHIPS")
+        val predictedPrice = intent.getStringExtra("PREDICTED_PRICE")
 
         //variable declaration
         val backButton = binding.backButton
@@ -46,7 +47,6 @@ class Result : AppCompatActivity() {
         val numberOfBedroom = binding.numberOfBedroomTextView
         val numberOfBathroom = binding.numberOfBathroomTextView
         val parkingLot = binding.parkingLotTextView
-        val floorRange = binding.floorRangeTextView
 
         val facilities = binding.facilitiesChipGroup
         val nearbyFacilities = binding.nearbyFacilitiesChipGroup
@@ -54,21 +54,18 @@ class Result : AppCompatActivity() {
         val ageOfUnit = binding.ageOfUnitTextView
         val tenureType = binding.tenureTypeTextView
         val landTitle = binding.landTitleTextView
-        val developer = binding.developerTextView
 
         // Display selected values
-        price.text = priceValue
+        price.text = predictedPrice
         locationArea.text = locationAreaValue
         propertyType.text = propertyTypeValue
         propertySize.text = propertySizeValue
         numberOfBedroom.text = numberOfBedroomValue
         numberOfBathroom.text = numberOfBathroomValue
         parkingLot.text = parkingLotValue
-        floorRange.text = floorRangeValue
         ageOfUnit.text = ageOfUnitValue
         tenureType.text = tenureTypeValue
         landTitle.text = landTitleValue
-        developer.text = developerValue
 
         // Clear existing chips
         facilities.removeAllViews()
@@ -113,7 +110,7 @@ class Result : AppCompatActivity() {
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.type = "text/plain"
             val shareMessage = """
-                Price: $priceValue
+                Price: $predictedPrice
                 Location Area: $locationAreaValue
                 Property Type: $propertyTypeValue
                 Property Size: $propertySizeValue
