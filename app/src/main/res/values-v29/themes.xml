@@ -1,7 +1,9 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.HousePricePredictionApp" parent="Theme.Material3.Light.NoActionBar">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
+    <style name="Base.Theme.HousePricePredictionApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Force light mode -->
+        <item name="android:forceDarkAllowed">false</item>
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/red_primary</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -11,6 +13,4 @@
         <item name="android:fontFamily">@font/manrope_regular</item>
 
     </style>
-
-    <style name="Theme.HousePricePredictionApp" parent="Base.Theme.HousePricePredictionApp" />
 </resources>
